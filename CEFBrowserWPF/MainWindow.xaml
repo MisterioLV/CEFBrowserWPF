@@ -9,16 +9,18 @@
         Title="CornDog" Height="450" Width="800">
     <Grid>
         <ToolBarTray Background="DarkGray" Height="30" VerticalAlignment="Top" Margin="5,0,5,0">
-            <ToolBar Name="MyToolbar" Height="30" Margin="0,0,-693,0.4" HorizontalAlignment="Left" Width="1525" >
-                <Button Background="DarkGray" Content="Home" Margin=" 5, 0, 5, 0" Click="HomeButton_Click" />
-                <Button Background="DarkGray" Content="Close" Margin="5, 0, 5, 0" />
-                <Button x:Name="GoButton" Background="DarkGray" Content="Go" Margin="5, 0, 5, 0" Click="GoButton_Click" />
-                <TextBox x:Name="AddressBar" Background="Darkgray" Text="Enter URL" Width="1214" Margin="0,2,0,1.6" FontFamily="Comic Sans MS" />
-                <ComboBox x:Name="QuickSites" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Width="160" FontFamily="Comic Sans MS"/>
+            <ToolBar Name="MyToolbar" Height="30" Margin="0,0,0,0" HorizontalAlignment="Stretch" Width="784" >
+                <Button Background="DarkGray" Content="Home" Margin="0,0,0,3" Click="HomeButton_Click" />
+                <Button Background="DarkGray" Content="Close" Margin="0,0,0,3" />
+                <Button x:Name="GoButton" Background="DarkGray" Content="Go" Margin="0,0,0,3" Click="GoButton_Click" ClickMode="Press" />
+                <TextBox x:Name="AddressBar" Background="Darkgray" Text="Enter URL" Width="200" Margin="0,0,0,2" FontFamily="Comic Sans MS" />
+                <Button x:Name="Back" Background="DarkGray" Content="&lt;" Margin="0,0,0,3" HorizontalAlignment="Right" Click="BackButton_Click" ClickMode="Press" Height="22" Width="22" />
+                <Button x:Name="Forward" Background="DarkGray" Content="&gt;" Margin="0,0,0,3" HorizontalAlignment="Right" Click="ForwardButton_Click" Height="22" Width="22" ClickMode="Press" />
+                <ComboBox x:Name="QuickSites" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Stretch" Width="200" FontFamily="Comic Sans MS"/>
             </ToolBar>
         </ToolBarTray>
 
-        <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="0" Width="1525"
+        <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="0"
         Address="http://www.google.com" Margin="0,35,-0.4,0" />
     </Grid>
 </Window>
