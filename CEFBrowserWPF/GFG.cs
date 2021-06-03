@@ -78,9 +78,8 @@ namespace CEFBrowserWPF
         // Driver Code
         public static void Main(string[] args)
         {
-            using (var form = new MainForm())
-                form.Run();
-            SimulatorFunction();
+
+            
         }
         static void SimulatorFunction()
         {
