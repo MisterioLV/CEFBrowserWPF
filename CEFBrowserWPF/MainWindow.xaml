@@ -13,7 +13,7 @@
                 <Button Background="DarkGray" Content="Home" Margin="0,0,0,3" Click="HomeButton_Click" />
                 <Button Background="DarkGray" Content="Close" Margin="0,0,0,3" />
                 <Button x:Name="GoButton" Background="DarkGray" Content="Go" Margin="0,0,0,3" Click="GoButton_Click" ClickMode="Press" />
-                <TextBox x:Name="AddressBar" Background="Darkgray" Text="Enter URL" Width="200" Margin="0,0,0,2" FontFamily="Comic Sans MS" />
+                <TextBox x:Name="AddressBar" Background="Darkgray" Text="Enter URL" Width="200" Margin="0,0,0,2" FontFamily="Comic Sans MS" TextChanged="AddressBar_TextChanged" />
                 <Button x:Name="Back" Background="DarkGray" Content="&lt;" Margin="0,0,0,3" HorizontalAlignment="Right" Click="BackButton_Click" ClickMode="Press" Height="22" Width="22" />
                 <Button x:Name="Forward" Background="DarkGray" Content="&gt;" Margin="0,0,0,3" HorizontalAlignment="Right" Click="ForwardButton_Click" Height="22" Width="22" ClickMode="Press" />
                 <ComboBox x:Name="QuickSites" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Stretch" Width="200" FontFamily="Comic Sans MS"/>

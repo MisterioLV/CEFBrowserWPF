@@ -76,11 +76,6 @@ namespace CEFBrowserWPF
             }
         }
         // Driver Code
-        public static void Main(string[] args)
-        {
-
-            
-        }
         static void SimulatorFunction()
         {
             // Current URL

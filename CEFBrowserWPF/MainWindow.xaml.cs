@@ -18,6 +18,8 @@ namespace CEFBrowserWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ICommand forwardCommand { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -42,12 +44,17 @@ namespace CEFBrowserWPF
         // Working on these two
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            ICommand backCommand = Browser.BackCommand;
+            ICommand forwardCommand = Browser.BackCommand; 
         }
 
         private void ForwardButton_Click(object sender, RoutedEventArgs e)
         {
             ICommand forwardCommand = Browser.ForwardCommand;
+        }
+
+        private void AddressBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
         }
     }
 }
