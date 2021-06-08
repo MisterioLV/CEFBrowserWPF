@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using CefSharp;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,12 +30,6 @@ namespace CEFBrowserWPF
         {
             Browser.Load(AddressBar.Text);
         }
-        
-        // Ignore this one
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
@@ -44,17 +39,12 @@ namespace CEFBrowserWPF
         // Working on these two
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            ICommand forwardCommand = Browser.BackCommand; 
+            Browser.Back();
         }
 
-        private void ForwardButton_Click(object sender, RoutedEventArgs e)
+        public void ForwardButton_Click(object sender, RoutedEventArgs e)
         {
-            ICommand forwardCommand = Browser.ForwardCommand;
-        }
-
-        private void AddressBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
+            Browser.Forward();
         }
     }
 }

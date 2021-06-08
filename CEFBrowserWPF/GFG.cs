@@ -10,8 +10,6 @@ namespace CEFBrowserWPF
             return i.ToString();
         }
 
-        // Stores the current 
-        // visiting page
         static String current_state_url = "";
 
         // Stores url when pressed forward
@@ -115,7 +113,7 @@ namespace CEFBrowserWPF
             Console.Write("Current URL after pressing" + " Forward button is: " + current_state_url + " \n");
                                                    
             // New current URL
-            url = "nikhil.com";
+            url = "Reddit.com";
 
             // Visit the current URL
             visit_new_url(url);
